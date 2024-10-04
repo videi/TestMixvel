@@ -18,6 +18,8 @@ namespace RouteFinderAPI.Providers.Two.Services
 
         public async Task<bool> IsAvailableAsync(CancellationToken cancellationToken)
         {
+            return true;
+
             var response = await _httpClient.GetAsync($"{_uri}/ping", cancellationToken);
             return response.IsSuccessStatusCode;
         }
